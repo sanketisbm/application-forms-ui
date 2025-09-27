@@ -1,0 +1,353 @@
+<div id="formCanvas" class="a4 d-none">
+    <style>
+        :root {
+            --blue: #003096;
+            --light: #e7f3ff;
+            --line: #c9d3e1;
+            --ink: #333;
+        }
+
+        .a4 {
+            width: 210mm;
+            min-height: 297mm;
+            background: #fff;
+            margin: 12px auto;
+            padding: 10mm;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
+            border-radius: 6px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--ink);
+        }
+
+        .chip {
+            float: right;
+            margin-top: -8mm;
+            background: var(--light);
+            color: var(--blue);
+            font-weight: 700;
+            border: 2px solid var(--blue);
+            border-radius: 22px;
+            padding: 4px 16px;
+            display: inline-block;
+        }
+
+        .card-outline {
+            border: 2px solid #9bd0ff;
+            border-radius: 8px;
+            padding: 8px;
+            background: #f1f7ff;
+        }
+
+        .header-bar {
+            background: #fff;
+            border: 1px solid var(--line);
+            padding: 10px;
+            border-radius: 6px;
+            display: grid;
+            grid-template-columns: 90px 110px 1fr;
+            gap: 12px;
+        }
+
+        .logo-box,
+        .photo-box,
+        .enroll-box {
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-box {
+            height: 58px;
+        }
+
+        .photo-box {
+            height: 58px;
+            font-size: 10px;
+            text-align: center;
+            padding: 6px;
+            white-space: pre-line;
+        }
+
+        .enroll-box {
+            height: 58px;
+            padding: 6px;
+            display: block;
+        }
+
+        .enroll-box label {
+            font-size: 10px;
+            font-weight: 700;
+            color: #666;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .enroll-box .value {
+            height: 32px;
+            border: 1px solid var(--line);
+            border-radius: 4px;
+        }
+
+        .row-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .cell {
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            padding: 6px;
+            background: #fff;
+        }
+
+        .cell .lbl {
+            font-size: 11px;
+            font-weight: 700;
+            margin-bottom: 3px;
+            color: #444;
+        }
+
+        .cell .value {
+            font-size: 12px;
+        }
+
+        table.form-table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+            margin-top: 8px;
+        }
+
+        .form-table th,
+        .form-table td {
+            border: 1px solid var(--line);
+            padding: 6px;
+            font-size: 12px;
+            vertical-align: top;
+        }
+
+        .form-table th {
+            background: #f6fbff;
+            font-weight: 700;
+            font-size: 11px;
+            color: #444;
+        }
+
+        .value {
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+        }
+
+        .band {
+            background: #0e1116;
+            color: #fff;
+            font-weight: 700;
+            font-size: 11px;
+            padding: 6px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+
+        .muted {
+            color: #666;
+            font-size: 11px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+
+        .declaration {
+            margin-top: 10px;
+        }
+
+        .declaration .title {
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        .box {
+            border: 1px solid var(--line);
+            background: #fff;
+            border-radius: 4px;
+            padding: 8px;
+        }
+
+        @media print {
+            .a4 {
+                box-shadow: none;
+                margin: 0;
+            }
+        }
+    </style>
+
+    <div class="chip">Application Form</div>
+    <div class="card-outline">
+        <div class="header-bar">
+            <div class="logo-box"><img id="entityLogo" src="http://istm.org.in/front-assets/images/logo/logo.webp" alt="Logo" style="max-height:46px;max-width:80px;"></div>
+            <div class="photo-box">Affix Latest Color Photograph Here</div>
+            <div class="enroll-box"><label>ENROLLMENT NO.</label>
+                <div class="value"></div>
+            </div>
+        </div>
+
+        <div class="row-2">
+            <div class="cell">
+                <div class="lbl">Course Name</div>
+                <div class="value" id="v_course"></div>
+            </div>
+            <div class="cell">
+                <div class="lbl">Specialization</div>
+                <div class="value" id="v_specialization"></div>
+            </div>
+        </div>
+
+        <table class="form-table">
+             <tr>
+              <!-- Full Name spans 2 rows -->
+              <th style="width:26%" rowspan="2">
+                Full Name<br>
+                <span class="muted">(In Block letters)</span>
+              </th>
+              <!-- These are headers for the second row -->
+              <th style="width:24%">Surname</th>
+              <th style="width:24%">First Name</th>
+              <th style="width:26%">Middle Name</th>
+            </tr>
+            <tr>
+              <td class="value" id="v_name_surname"></td>
+              <td class="value" id="v_name_first"></td>
+              <td class="value" id="v_name_middle"></td>
+            </tr>
+            <tr>
+              <!-- Father/Husband's Name spans 2 rows -->
+              <th rowspan="2">
+                Fathers/Husbands Name<br>
+                <span class="muted">(In Block letters)</span>
+              </th>
+              <th>Surname</th>
+              <th>First Name</th>
+              <th>Middle Name</th>
+            </tr>
+            <tr>
+              <td class="value" id="v_fname_surname"></td>
+              <td class="value" id="v_fname_first"></td>
+              <td class="value" id="v_fname_middle"></td>
+            </tr>
+           <tr>
+            <!-- Left side: Correspondence Address (spans 3 rows) -->
+            <th rowspan="3" style="width:50%">
+              Correspondence Address <br>
+              Area <br>
+              Landmark & City <br>
+              State & Pin Code
+            </th>
+            <td rowspan="3" class="value" id="v_address" style="width:25%"></td>
+            <!-- Right side: Gender row -->
+            <th style="width:25%">Gender</th>
+            <td class="value" id="v_gender" style="width:25%"></td>
+          </tr>
+          <tr>
+            <!-- Right side: Nationality row -->
+            <th>Nationality</th>
+            <td class="value" id="v_nationality"></td>
+          </tr>
+          <tr>
+            <!-- Right side: DOB row -->
+            <th>Date of Birth</th>
+            <td class="value" id="v_dob"></td>
+          </tr>
+            
+            <tr>
+              <!-- Telephone Number spans 2 rows -->
+              <th rowspan="2" style="width:30%">
+                Telephone Number <br>
+                <span class="muted">(With STD Code)</span>
+              </th>
+              <!-- Top row: Residence / Office / Mobile -->
+              <th style="width:23%">Residence</th>
+              <th style="width:23%">Office</th>
+              <th style="width:24%">Mobile</th>
+            </tr>
+            <tr>
+              <!-- Bottom row: values -->
+              <td class="value" id="v_phone_res"></td>
+              <td class="value" id="v_phone_off"></td>
+              <td class="value" id="v_phone_mobile"></td>
+            </tr>
+            <tr>
+                <th>Email ID</th>
+                <td colspan="3" class="value" id="v_email"></td>
+            </tr>
+        </table>
+
+        <div class="band">ACADEMIC DETAILS</div>
+        <table class="form-table">
+            <thead>
+                <tr>
+                    <th style="width:28%">Degree/Certificate</th>
+                    <th style="width:24%">Institution</th>
+                    <th style="width:16%">Exam Month</th>
+                    <th style="width:16%">Exam Year</th>
+                    <th style="width:16%">Subject / Specialization</th>
+                    <th style="width:16%">Result / %</th>
+                </tr>
+            </thead>
+            <tbody id="tbody_acad"></tbody>
+        </table>
+
+        <div class="band" style="margin-top:8px">WORK EXPERIENCE</div>
+        <div class="box" id="v_work"></div>
+
+        <div class="band" style="margin-top:8px">FEES</div>
+        <table class="form-table">
+            <tr>
+    <th>Basic Course Fees</th>
+    <th>Other Charges</th>
+    <th>Details</th>
+    <th>Total Fees</th>
+  </tr>
+  <tr>
+    <td class="value" id="v_fees_basic"></td>
+    <td class="value" id="v_fees_other"></td>
+    <td class="value" id="v_fees_details"></td>
+    <td class="value" id="v_fees_total"></td>
+  </tr>
+
+  <!-- Fees Paid / Balance Fees -->
+  <tr>
+    <th>Fees Paid</th>
+    <td class="value" id="v_fees_paid"></td>
+    <th>Balance Fees</th>
+    <td class="value" id="v_fees_balance"></td>
+  </tr>
+        </table>
+
+        <div class="grid-2 mt-2">
+            <div class="cell">
+                <div class="lbl">Date</div>
+                <div class="value" id="v_date"></div>
+            </div>
+            <div class="cell">
+                <div class="lbl">Branch</div>
+                <div class="value" id="v_branch"></div>
+            </div>
+        </div>
+
+        <div class="declaration">
+            <div class="title">Declaration</div>
+            <div class="box" id="v_declaration">
+                I certify that all information provided in this application is complete and accurate.
+                I agree to familiarize myself with all the rules and regulations of the program set forth by ISTM and abide by them.
+            </div>
+            <div class="d-flex justify-content-end mt-2"><span class="muted">Student’s Signature: ____________</span></div>
+        </div>
+    </div>
+</div>

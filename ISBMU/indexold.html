@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISBM University Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.5;
+        }
+        .form-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .section-header {
+            background-color: #e0e0e0;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            margin: 15px 0 10px 0;
+        }
+        .photo-cell {
+            width: 120px;
+            height: 150px;
+            text-align: center;
+            vertical-align: middle;
+            background-color: #f9f9f9;
+        }
+        .input-field {
+            width: 100%;
+            border: none;
+            background: transparent;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .input-field:focus {
+            outline: 1px solid #4d90fe;
+            background-color: #f0f7ff;
+        }
+        .checkbox-group {
+            display: flex;
+            gap: 15px;
+        }
+        .rules {
+            font-size: 0.9em;
+            margin: 15px 0;
+        }
+        .signature-area {
+            margin-top: 30px;
+            border-top: 1px solid #000;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1 style="text-align: center;">APPLICATION FORM</h1>
+        
+        <table>
+            <tr>
+                <th>Application No.</th>
+                <td><input type="text" class="input-field" name="application_no" value="A-"></td>
+                <th>Registration No.</th>
+                <td><input type="text" class="input-field" name="registration_no" value="(to be filled by office)"></td>
+            </tr>
+        </table>
+
+        <div class="section-header">PROGRAM APPLIED FOR</div>
+        
+        <table>
+            <tr>
+                <th>UG</th>
+                <th>PG</th>
+                <th>Other</th>
+                <th>Course Name:</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="program_ug"></td>
+                <td><input type="checkbox" name="program_pg"></td>
+                <td><input type="checkbox" name="program_other"></td>
+                <td><input type="text" class="input-field" name="course_name"></td>
+            </tr>
+            <tr>
+                <td colspan="4">(for Course list see the Information Brochure)</td>
+            </tr>
+        </table>
+        
+        <table>
+            <tr>
+                <th>Specialization</th>
+                <td>
+                    (1) <input type="text" class="input-field" name="specialization_1"><br>
+                    (2) <input type="text" class="input-field" name="specialization_2">
+                </td>
+            </tr>
+        </table>
+        
+        <table>
+            <tr>
+                <th>Medium of Instruction</th>
+                <td>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="medium_hindi"> Hindi</label>
+                        <label><input type="checkbox" name="medium_english"> English</label>
+                    </div>
+                </td>
+                <th>Admission Session</th>
+                <td><input type="text" class="input-field" name="admission_session"></td>
+            </tr>
+            <tr>
+                <th>Lateral Entry</th>
+                <td>
+                    <div class="checkbox-group">
+                        <label><input type="radio" name="lateral_entry" value="yes"> Yes</label>
+                        <label><input type="radio" name="lateral_entry" value="no"> No</label>
+                    </div>
+                </td>
+                <td colspan="2"></td>
+            </tr>
+        </table>
+        
+        <table>
+            <tr>
+                <th>Medium of Instruction</th>
+                <th>Study Scheme</th>
+                <th>Course Type</th>
+            </tr>
+            <tr>
+                <td>
+                    <div><input type="checkbox" name="moi_hindi"> Hindi</div>
+                    <div><input type="checkbox" name="moi_english"> English</div>
+                </td>
+                <td>
+                    <div><input type="checkbox" name="study_sem"> Sem Mode</div>
+                    <div><input type="checkbox" name="study_year"> Year Mode</div>
+                </td>
+                <td>
+                    <div><input type="checkbox" name="course_full"> Full time</div>
+                    <div><input type="checkbox" name="course_part"> Part time</div>
+                </td>
+            </tr>
+        </table>
+        
+        <table>
+            <tr>
+                <td class="photo-cell" rowspan="4">Passport Size Photograph</td>
+                <th>1. NAME OF THE CANDIDATE</th>
+            </tr>
+            <tr>
+                <td><input type="text" class="input-field" name="candidate_name" placeholder="(as in candidate's Class X worksheet or equivalent certificate - enclose photocopy)"></td>
+            </tr>
+            <tr>
+                <th>2. FATHER'S / HUSBAND'S NAME</th>
+            </tr>
+            <tr>
+                <td><input type="text" class="input-field" name="father_husband_name"></td>
+            </tr>
+        </table>
+        
+        <table>
+            <tr>
+                <th>3. MOTHER'S NAME</th>
+                <td><input type="text" class="input-field" name="mother_name"></td>
+            </tr>
+        </table>
+        
+        <table>
+            <tr>
+                <th>4. GENDER</th>
+                <td>
+                    <div class="checkbox-group">
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                    </div>
+                </td>
+                <th>5. DATE OF BIRTH</th>
+                <td><input type="date" class="input-field" name="dob"></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="font-size: 0.9em;">(or first published as a / matched or equivalent certificate)</td>
+            </tr>
+        </table>
+        
+        <table>
+            <tr>
+                <th>6. CATEGORY</th>
+                <td>
+                    <div class="checkbox-group">
+                        <label><input type="radio" name="category" value="gen"> GEN</label>
+                        <label><input type="radio" name="category" value="sc"> SC</label>
+                        <label><input type="radio" name="category" value="minority"> Minority</label>
+                        <label><input type="radio" name="category" value="obc"> OBC</label>
+                        <label><input type="radio" name="category" value="st"> ST</label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        
+        <table>
+            <tr>
+                <th>7. NATIONALITY</th>
+                <td>
+                    <div class="checkbox-group">
+                        <label><input type="radio" name="nationality" value="indian"> Indian</label>
+                        <label><input type="radio" name="nationality" value="others"> Others</label>
+                    </div>
+                </td>
+                <th>8. MARITAL STATUS</th>
+                <td>
+                    <div class="checkbox-group">
+                        <label><input type="radio" name="marital_status" value="single"> Single</label>
+                        <label><input type="radio" name="marital_status" value="married"> Married</label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        
+        <div class="section-header">9. PERMANENT ADDRESS (if different from correspondence address)</div>
+        <table>
+            <tr>
+                <th>Address</th>
+                <td colspan="3"><input type="text" class="input-field" name="permanent_address"></td>
+            </tr>
+            <tr>
+                <th>State</th>
+                <td><input type="text" class="input-field" name="permanent_state"></td>
+                <th>City</th>
+                <td><input type="text" class="input-field" name="permanent_city"></td>
+            </tr>
+            <tr>
+                <th>PIN / ZIP Code</th>
+                <td><input type="text" class="input-field" name="permanent_pin"></td>
+                <th>Country</th>
+                <td><input type="text" class="input-field" name="permanent_country"></td>
+            </tr>
+        </table>
+        
+        <div class="section-header">10. CORRESPONDENCE ADDRESS</div>
+        <table>
+            <tr>
+                <th>Address</th>
+                <td colspan="3"><input type="text" class="input-field" name="correspondence_address"></td>
+            </tr>
+            <tr>
+                <th>State</th>
+                <td><input type="text" class="input-field" name="correspondence_state"></td>
+                <th>City</th>
+                <td><input type="text" class="input-field" name="correspondence_city"></td>
+            </tr>
+            <tr>
+                <th>PIN / ZIP Code</th>
+                <td><input type="text" class="input-field" name="correspondence_pin"></td>
+                <th>Country</th>
+                <td><input type="text" class="input-field" name="correspondence_country"></td>
+            </tr>
+        </table>
+        
+        <div class="section-header">11. E-MAIL ADDRESS (Only in CAPITAL LETTERS)</div>
+        <table>
+            <tr>
+                <td><input type="email" class="input-field" name="email" style="text-transform: uppercase;"></td>
+            </tr>
+        </table>
+        
+        <div class="section-header">12. CONTACT NUMBERS</div>
+        <table>
+            <tr>
+                <th>Country Code +</th>
+                <th>Mobile Number</th>
+                <th>Landline phone number with STD (area) code</th>
+            </tr>
+            <tr>
+                <td><input type="text" class="input-field" name="country_code"></td>
+                <td><input type="text" class="input-field" name="mobile_number"></td>
+                <td><input type="text" class="input-field" name="landline_number"></td>
+            </tr>
+        </table>
+        
+        <div class="section-header">14. EDUCATIONAL QUALIFICATIONS</div>
+        <p style="font-size: 0.9em;">It is mandatory to fill all details of educational qualification (as applicable) from Class X onwards till last completed semester/year. If the system of marking of your school/college is on grading pattern, convert grade into marks as applicable and fill in the respective columns. In absence of complete information, form will be rejected.</p>
+        
+        <table>
+            <tr>
+                <th>Examination Passed</th>
+                <th>Stream</th>
+                <th>Name of the School / college and Board / University</th>
+                <th>Year of passing</th>
+                <th>Subject Studies</th>
+                <th>Marks Obtained</th>
+                <th>Maximum Marks</th>
+                <th>% of Marks</th>
+            </tr>
+            <tr>
+                <td>10th</td>
+                <td><input type="text" class="input-field" name="10th_stream"></td>
+                <td><input type="text" class="input-field" name="10th_school"></td>
+                <td><input type="text" class="input-field" name="10th_year"></td>
+                <td><input type="text" class="input-field" name="10th_subjects"></td>
+                <td><input type="text" class="input-field" name="10th_obtained"></td>
+                <td><input type="text" class="input-field" name="10th_maximum"></td>
+                <td><input type="text" class="input-field" name="10th_percentage"></td>
+            </tr>
+            <tr>
+                <td>12th</td>
+                <td><input type="text" class="input-field" name="12th_stream"></td>
+                <td><input type="text" class="input-field" name="12th_school"></td>
+                <td><input type="text" class="input-field" name="12th_year"></td>
+                <td><input type="text" class="input-field" name="12th_subjects"></td>
+                <td><input type="text" class="input-field" name="12th_obtained"></td>
+                <td><input type="text" class="input-field" name="12th_maximum"></td>
+                <td><input type="text" class="input-field" name="12th_percentage"></td>
+            </tr>
+            <tr>
+                <td>Graduation</td>
+                <td><input type="text" class="input-field" name="grad_stream"></td>
+                <td><input type="text" class="input-field" name="grad_school"></td>
+                <td><input type="text" class="input-field" name="grad_year"></td>
+                <td><input type="text" class="input-field" name="grad_subjects"></td>
+                <td><input type="text" class="input-field" name="grad_obtained"></td>
+                <td><input type="text" class="input-field" name="grad_maximum"></td>
+                <td><input type="text" class="input-field" name="grad_percentage"></td>
+            </tr>
+            <tr>
+                <td>Post Graduation</td>
+                <td><input type="text" class="input-field" name="pg_stream"></td>
+                <td><input type="text" class="input-field" name="pg_school"></td>
+                <td><input type="text" class="input-field" name="pg_year"></td>
+                <td><input type="text" class="input-field" name="pg_subjects"></td>
+                <td><input type="text" class="input-field" name="pg_obtained"></td>
+                <td><input type="text" class="input-field" name="pg_maximum"></td>
+                <td><input type="text" class="input-field" name="pg_percentage"></td>
+            </tr>
+            <tr>
+                <td>Any Other Qualification</td>
+                <td><input type="text" class="input-field" name="other_stream"></td>
+                <td><input type="text" class="input-field" name="other_school"></td>
+                <td><input type="text" class="input-field" name="other_year"></td>
+                <td><input type="text" class="input-field" name="other_subjects"></td>
+                <td><input type="text" class="input-field" name="other_obtained"></td>
+                <td><input type="text" class="input-field" name="other_maximum"></td>
+                <td><input type="text" class="input-field" name="other_percentage"></td>
+            </tr>
+        </table>
+        
+        <table>
+            <tr>
+                <th>Provisionally Admitted</th>
+                <td>
+                    <div class="checkbox-group">
+                        <label><input type="radio" name="provisional_admit" value="yes"> Yes</label>
+                        <label><input type="radio" name="provisional_admit" value="no"> No</label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        
+        <div class="section-header">15. FAMILY INFORMATION</div>
+        <table>
+            <tr>
+                <th>Relation</th>
+                <th>Name</th>
+                <th>Qualification</th>
+                <th>Occupation</th>
+                <th>Salary</th>
+                <th>Contact No.</th>
+            </tr>
+            <tr>
+                <td><input type="text" class="input-field" name="family_relation_1"></td>
+                <td><input type="text" class="input-field" name="family_name_1"></td>
+                <td><input type="text" class="input-field" name="family_qualification_1"></td>
+                <td><input type="text" class="input-field" name="family_occupation_1"></td>
+                <td><input type="text" class="input-field" name="family_salary_1"></td>
+                <td><input type="text" class="input-field" name="family_contact_1"></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="input-field" name="family_relation_2"></td>
+                <td><input type="text" class="input-field" name="family_name_2"></td>
+                <td><input type="text" class="input-field" name="family_qualification_2"></td>
+                <td><input type="text" class="input-field" name="family_occupation_2"></td>
+                <td><input type="text" class="input-field" name="family_salary_2"></td>
+                <td><input type="text" class="input-field" name="family_contact_2"></td>
+            </tr>
+            <tr>
+                <td><input type="text" class="input-field" name="family_relation_3"></td>
+                <td><input type="text" class="input-field" name="family_name_3"></td>
+                <td><input type="text" class="input-field" name="family_qualification_3"></td>
+                <td><input type="text" class="input-field" name="family_occupation_3"></td>
+                <td><input type="text" class="input-field" name="family_salary_3"></td>
+                <td><input type="text" class="input-field" name="family_contact_3"></td>
+            </tr>
+        </table>
+        
+        <div class="section-header">16. DOCUMENTS ATTACHED</div>
+        <table>
+            <tr>
+                <td>
+                    <div><input type="checkbox" name="doc_10th"> 10th Marksheet</div>
+                    <div><input type="checkbox" name="doc_12th"> 12th Marksheet</div>
+                    <div><input type="checkbox" name="doc_grad"> Graduation Marksheet</div>
+                    <div><input type="checkbox" name="doc_pg"> Post Graduation Marksheet</div>
+                    <div><input type="checkbox" name="doc_photo"> Passport Size Photograph</div>
+                </td>
+                <td>
+                    <div><input type="checkbox" name="doc_id"> ID Proof</div>
+                    <div><input type="checkbox" name="doc_address"> Address Proof</div>
+                    <div><input type="checkbox" name="doc_category"> Category Certificate (if applicable)</div>
+                    <div><input type="checkbox" name="doc_character"> Character Certificate</div>
+                    <div><input type="checkbox" name="doc_migration"> Migration Certificate</div>
+                </td>
+            </tr>
+        </table>
+        
+        <div class="rules">
+            <p><strong>RULES:</strong></p>
+            <p>1. The application form must be filled in capital letters.</p>
+            <p>2. All the information provided by the candidate must be supported by the attested copies of the relevant certificates/documents.</p>
+            <p>3. Incomplete application form will be rejected.</p>
+            <p>4. The University reserves the right to amend the rules and regulations from time to time.</p>
+            <p>5. The decision of the University will be final and binding in all matters.</p>
+        </div>
+        
+        <div class="signature-area">
+            <p><strong>DECLARATION BY THE CANDIDATE</strong></p>
+            <p>I hereby declare that all the information provided by me in this application form is true to the best of my knowledge and belief. I have read and understood the rules and regulations of the University and I agree to abide by them.</p>
+            
+            <table>
+                <tr>
+                    <td style="width: 50%;">
+                        <p>Date: ____________________</p>
+                        <p>Place: ____________________</p>
+                    </td>
+                    <td style="text-align: center;">
+                        <p>Signature of the Candidate</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="signature-area">
+            <p><strong>FOR OFFICE USE ONLY</strong></p>
+            <table>
+                <tr>
+                    <th>Application Verified by</th>
+                    <td><input type="text" class="input-field" name="verified_by"></td>
+                    <th>Date</th>
+                    <td><input type="date" class="input-field" name="verification_date"></td>
+                </tr>
+                <tr>
+                    <th>Remarks</th>
+                    <td colspan="3"><input type="text" class="input-field" name="remarks"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
