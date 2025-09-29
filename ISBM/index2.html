@@ -24,17 +24,18 @@
         box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
         display: flex;
         flex-direction: column;
-        padding: 5mm;
+        padding: 15mm 5mm 5mm 5mm;
       "
     >
+      <!-- ======= PAGE 1: HEADER BLOCK (INLINE CSS ONLY) ======= -->
       <!-- ======= PAGE 1: HEADER BLOCK (INLINE CSS ONLY) ======= -->
       <div
         style="
           position: relative;
           border: 2.5px solid #7ec2dd;
           border-radius: 18px;
-          padding: 14px 14px 10px 14px;
-          background: #eaf6fc;
+          padding: 22mm 14px 14px 14px; /* extra top to make room for photo overlap */
+          background: #ffff;
         "
       >
         <!-- Application Form Badge -->
@@ -42,265 +43,3016 @@
           style="
             position: absolute;
             top: -18px;
-            right: 18px;
+            right: 23px;
             background: #d6eef9;
             color: #0d4f78;
             border: 2px solid #7ec2dd;
-            border-radius: 18px;
-            padding: 6px 16px;
-            font: 700 18px/1.2 Arial, sans-serif;
+            border-radius: 10px;
+            padding: 9px 16px;
+            font: 700 22px/1.2 Arial, sans-serif;
             box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+            width: 213px;
+            text-align: center;
           "
         >
           Application Form
         </div>
 
-        <!-- Top row: Logo (left) + Photo box (center) + Enrollment box (right) -->
+        <!-- Overlapping Photograph Box (centered) -->
         <div
           style="
+            position: absolute;
+            top: -5mm; /* raises it above the rounded border */
+            left: 44%;
+            transform: translateX(-50%);
+            width: 30mm;
+            height: 34mm;
+            border: 2px solid #7ec2dd;
+            background: #f7fbff;
             display: grid;
-            grid-template-columns: 1fr 140px 180px;
-            gap: 12px;
-            align-items: start;
+            place-items: center;
+            font: 600 11px/1.2 Arial, sans-serif;
+            text-align: center;
+            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.06);
           "
         >
-          <!-- Logo + caption -->
-          <div style="display: flex; align-items: center; gap: 12px">
-            <!-- LOGO: replace src with your logo path -->
-            <div
-              style="
-                width: 80px;
-                height: 80px;
-                border-radius: 50%;
-                background: #fff;
-                border: 2px solid #7ec2dd;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                overflow: hidden;
-              "
-            >
-              <img
-                src="YOUR_LOGO.png"
-                alt="ISBM Logo"
-                style="max-width: 72px; max-height: 72px; display: block"
-              />
-            </div>
-
-            <div style="font: 700 16px/1.2 Arial, sans-serif; color: #0d4f78">
-              <div style="font-size: 18px">ISBM</div>
-              <div style="font-weight: 400; font-size: 11px; color: #555">
-                Gateway To Excellence
-              </div>
-            </div>
-          </div>
-
-          <!-- Photograph box -->
-          <div
-            style="
-              width: 140px;
-              height: 170px;
-              background: #fff;
-              border: 2px solid #7ec2dd;
-              border-radius: 4px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              text-align: center;
-              padding: 6px;
-              box-shadow: inset 0 0 0 1px #d9eef7;
-            "
-          >
-            <div style="font: 600 12px/1.3 Arial, sans-serif; color: #2b5d78">
-              Affix Latest<br />Color Photograph<br />Here
-            </div>
-          </div>
-
-          <!-- Enrollment No. small table -->
-          <div style="justify-self: end; width: 180px">
-            <table
-              style="
-                width: 100%;
-                border-collapse: collapse;
-                background: #fff;
-                border: 1px solid #bfbfbf;
-                font: 700 12px Arial, sans-serif;
-                color: #333;
-              "
-            >
-              <tr>
-                <td
-                  style="
-                    text-align: center;
-                    padding: 6px;
-                    border: 1px solid #bfbfbf;
-                  "
-                >
-                  ENROLLMENT
-                </td>
-                <td
-                  style="
-                    text-align: center;
-                    padding: 6px;
-                    border: 1px solid #bfbfbf;
-                  "
-                >
-                  NO.
-                </td>
-              </tr>
-              <tr>
-                <td colspan="2" style="height: 28px; border: 1px solid #bfbfbf">
-                  &nbsp;
-                </td>
-              </tr>
-            </table>
-          </div>
+          Affix Latest<br />Color Photograph<br />Here
         </div>
 
-        <!-- University options row -->
+        <!-- Row: Logo (left) + spacer (center) + Enrollment box (right) -->
         <div
           style="
-            margin-top: 10px;
-            background: #fff;
-            border: 1.8px solid #7ec2dd;
-            border-radius: 8px;
-            padding: 8px 10px;
-            color: #0d4f78;
-            font: 600 12px/1.4 Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* FIX: 'between' -&gt; 'space-between' */
+            gap: 12px;
+            margin-top: -18mm;
           "
         >
-          <span style="display: inline-block; margin-right: 14px"
-            ><span
-              style="
-                display: inline-block;
-                width: 12px;
-                height: 12px;
-                border: 1.5px solid #333;
-                margin-right: 6px;
-                vertical-align: -2px;
-              "
-            ></span
-            >ISBM</span
-          >
-          <span style="display: inline-block; margin-right: 14px"
-            ><span
-              style="
-                display: inline-block;
-                width: 12px;
-                height: 12px;
-                border: 1.5px solid #333;
-                margin-right: 6px;
-                vertical-align: -2px;
-              "
-            ></span
-            >UNI</span
-          >
-          <span style="display: inline-block; margin-right: 14px"
-            ><span
-              style="
-                display: inline-block;
-                width: 12px;
-                height: 12px;
-                border: 1.5px solid #333;
-                margin-right: 6px;
-                vertical-align: -2px;
-              "
-            ></span
-            >CMI</span
-          >
-          <span style="display: inline-block; margin-right: 14px"
-            ><span
-              style="
-                display: inline-block;
-                width: 12px;
-                height: 12px;
-                border: 1.5px solid #333;
-                margin-right: 6px;
-                vertical-align: -2px;
-              "
-            ></span
-            >IIM</span
-          >
-          <span style="display: inline-block; margin-right: 14px"
-            ><span
-              style="
-                display: inline-block;
-                width: 12px;
-                height: 12px;
-                border: 1.5px solid #333;
-                margin-right: 6px;
-                vertical-align: -2px;
-              "
-            ></span
-            >NAIP</span
-          >
-          <span style="display: inline-block; margin-right: 0"
-            ><span
-              style="
-                display: inline-block;
-                width: 12px;
-                height: 12px;
-                border: 1.5px solid #333;
-                margin-right: 6px;
-                vertical-align: -2px;
-              "
-            ></span
-            >BEPUK</span
-          >
-        </div>
+          <!-- Logo Circle -->
+          <div>
+            <img src="favicon.png" style="height: 27mm; width: 37mm" />
+          </div>
 
-        <!-- Black section bar: "Course Name | Specialization | (blank column)" -->
-        <div style="margin-top: 10px">
-          <table
-            style="width: 100%; border-collapse: collapse; table-layout: fixed"
-          >
-            <tr>
-              <td
-                style="
-                  background: #000;
-                  color: #fff;
-                  font: 700 12px Arial, sans-serif;
-                  padding: 6px;
-                  border: 1px solid #000;
-                  width: 40%;
-                "
-              >
-                Course Name
-              </td>
-              <td
-                style="
-                  background: #000;
-                  color: #fff;
-                  font: 700 12px Arial, sans-serif;
-                  padding: 6px;
-                  border: 1px solid #000;
-                  width: 35%;
-                "
-              >
-                Specialization
-              </td>
-              <td
-                style="
-                  background: #000;
-                  color: #fff;
-                  font: 700 12px Arial, sans-serif;
-                  padding: 6px;
-                  border: 1px solid #000;
-                  width: 25%;
-                "
-              >
-                &nbsp;
-              </td>
-            </tr>
-            <tr>
-              <td
-                style="height: 24px; border: 1px solid #999; background: #fff"
-              ></td>
-              <td style="border: 1px solid #999; background: #fff"></td>
-              <td style="border: 1px solid #999; background: #fff"></td>
-            </tr>
+          <!-- Flexible spacer to keep layout balanced under the centered photo -->
+          <div style="flex: 1 1 auto"></div>
+
+          <!-- Enrollment No. box (right) -->
+          <table style="border-collapse: collapse; margin-top: 10mm">
+            <tbody>
+              <tr>
+                <td
+                  style="
+                    border: 1px solid #c9d3e1;
+                    padding: 6px 10px;
+                    text-align: center;
+                    font: 700 12px/1.1 Arial, sans-serif;
+                  "
+                >
+                  ENROLLMENT<br />NO.
+                </td>
+                <td
+                  style="
+                    border: 1px solid #c9d3e1;
+                    width: 130px;
+                    background: #fff;
+                  "
+                ></td>
+              </tr>
+            </tbody>
           </table>
         </div>
+
+        <table
+          class="MsoTableGrid"
+          border="1"
+          cellspacing="0"
+          cellpadding="0"
+          style="
+            width: 100%;
+            margin-top: 1rem;
+            border-collapse: collapse;
+            border: none;
+          "
+        >
+          <tbody>
+            <tr>
+              <td
+                width="96"
+                colspan="6"
+                valign="top"
+                style="
+                  width: 3in;
+                  border: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Course Name</span
+                  >
+                </p>
+              </td>
+              <td
+                width="204"
+                colspan="10"
+                valign="top"
+                style="
+                  width: 8in;
+                  border: solid windowtext 1pt;
+                  border-left: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="96"
+                colspan="6"
+                valign="top"
+                style="
+                  width: 3in;
+                  border: solid windowtext 1pt;
+                  border-left: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Specialization</span
+                  >
+                </p>
+              </td>
+              <td
+                width="204"
+                colspan="10"
+                valign="top"
+                style="
+                  border: solid windowtext 1pt;
+                  border-left: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  width: 8in;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 100%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="714"
+                colspan="29"
+                valign="top"
+                style="
+                  width: 535.5pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  background: black;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                      color: white;
+                    "
+                    >Personal
+                    Details&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span>
+                </p>
+              </td>
+            </tr>
+            <tr style="height: 11.7pt">
+              <td
+                width="150"
+                colspan="7"
+                rowspan="2"
+                valign="top"
+                style="
+                  width: 112.5pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 11.7pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Full Name
+                  </span>
+                </p>
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >(In Block latters)</span
+                  >
+                </p>
+              </td>
+              <td
+                width="190"
+                colspan="8"
+                valign="top"
+                style="
+                  width: 142.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 11.7pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="137"
+                colspan="8"
+                valign="top"
+                style="
+                  width: 102.8pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 11.7pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="237"
+                colspan="6"
+                valign="top"
+                style="
+                  width: 177.7pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 11.7pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr style="height: 8.3pt">
+              <td
+                width="190"
+                colspan="8"
+                valign="top"
+                style="
+                  width: 142.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 8.3pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Surname</span
+                  >
+                </p>
+              </td>
+              <td
+                width="137"
+                colspan="8"
+                valign="top"
+                style="
+                  width: 102.8pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 8.3pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >First Name</span
+                  >
+                </p>
+              </td>
+              <td
+                width="237"
+                colspan="6"
+                valign="top"
+                style="
+                  width: 177.7pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 8.3pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Middle Name</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr style="height: 11.7pt">
+              <td
+                width="150"
+                colspan="7"
+                rowspan="2"
+                valign="top"
+                style="
+                  width: 112.5pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 11.7pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Fathers/Husbands Name
+                  </span>
+                </p>
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >(In Block Letters)</span
+                  >
+                </p>
+              </td>
+              <td
+                width="190"
+                colspan="8"
+                valign="top"
+                style="
+                  width: 142.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 11.7pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="137"
+                colspan="8"
+                valign="top"
+                style="
+                  width: 102.8pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 11.7pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="237"
+                colspan="6"
+                valign="top"
+                style="
+                  width: 177.7pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 11.7pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr style="height: 8.3pt">
+              <td
+                width="190"
+                colspan="8"
+                valign="top"
+                style="
+                  width: 142.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid black 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 8.3pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Surname</span
+                  >
+                </p>
+              </td>
+              <td
+                width="137"
+                colspan="8"
+                valign="top"
+                style="
+                  width: 102.8pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid black 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 8.3pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >First Name</span
+                  >
+                </p>
+              </td>
+              <td
+                width="237"
+                colspan="6"
+                valign="top"
+                style="
+                  width: 177.7pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 8.3pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Middle Name</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr style="height: 9.7pt">
+              <td
+                width="150"
+                colspan="7"
+                rowspan="4"
+                valign="top"
+                style="
+                  width: 112.5pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 9.7pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Correspondence Address</span
+                  >
+                </p>
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Area</span
+                  >
+                </p>
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Landmark &amp; City</span
+                  >
+                </p>
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >State &amp; Pin Code</span
+                  >
+                </p>
+              </td>
+              <td
+                width="327"
+                colspan="16"
+                valign="top"
+                style="
+                  width: 245.3pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid #a6a6a6 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 9.7pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="237"
+                colspan="6"
+                valign="top"
+                style="
+                  width: 177.7pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  background: #d9d9d9;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 9.7pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr style="height: 9.15pt">
+              <td
+                width="327"
+                colspan="16"
+                valign="top"
+                style="
+                  width: 245.3pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid #a6a6a6 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 9.15pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="99"
+                colspan="5"
+                valign="top"
+                style="
+                  width: 74.2pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 9.15pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Gender</span
+                  >
+                </p>
+              </td>
+              <td
+                width="138"
+                valign="top"
+                style="
+                  width: 103.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 9.15pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Male / Female</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr style="height: 3.75pt">
+              <td
+                width="327"
+                colspan="16"
+                valign="top"
+                style="
+                  width: 245.3pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid #a6a6a6 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 3.75pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="99"
+                colspan="5"
+                valign="top"
+                style="
+                  width: 74.2pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 3.75pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Nationality</span
+                  >
+                </p>
+              </td>
+              <td
+                width="138"
+                valign="top"
+                style="
+                  width: 103.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 3.75pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr style="height: 5.85pt">
+              <td
+                width="327"
+                colspan="16"
+                valign="top"
+                style="
+                  width: 245.3pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid #a6a6a6 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 5.85pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="99"
+                colspan="5"
+                valign="top"
+                style="
+                  width: 74.2pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 5.85pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Date of Birth</span
+                  >
+                </p>
+              </td>
+              <td
+                width="138"
+                valign="top"
+                style="
+                  width: 103.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 5.85pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr style="height: 11.7pt">
+              <td
+                width="150"
+                colspan="7"
+                rowspan="2"
+                valign="top"
+                style="
+                  width: 112.5pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 11.7pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Telephone Number</span
+                  >
+                </p>
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >(With STD Code)</span
+                  >
+                </p>
+              </td>
+              <td
+                width="172"
+                colspan="7"
+                valign="top"
+                style="
+                  width: 129pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 11.7pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="143"
+                colspan="8"
+                valign="top"
+                style="
+                  width: 106.95pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 11.7pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="249"
+                colspan="7"
+                valign="top"
+                style="
+                  width: 187.05pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 11.7pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr style="height: 8.3pt">
+              <td
+                width="172"
+                colspan="7"
+                valign="top"
+                style="
+                  width: 129pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid black 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 8.3pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Residence</span
+                  >
+                </p>
+              </td>
+              <td
+                width="143"
+                colspan="8"
+                valign="top"
+                style="
+                  width: 106.95pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid black 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 8.3pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Office</span
+                  >
+                </p>
+              </td>
+              <td
+                width="249"
+                colspan="7"
+                valign="top"
+                style="
+                  width: 187.05pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 8.3pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Mobile</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="72"
+                colspan="2"
+                valign="top"
+                style="
+                  width: 0.75in;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Email ID</span
+                  >
+                </p>
+              </td>
+              <td
+                width="282"
+                colspan="14"
+                valign="top"
+                style="
+                  width: 211.35pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="360"
+                colspan="13"
+                valign="top"
+                style="
+                  width: 270.15pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="714"
+                colspan="29"
+                valign="top"
+                style="
+                  width: 535.5pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  background: black;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                      color: white;
+                    "
+                    >Academic Details (Please list in Chronological order
+                    including examinations with results pending)</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr style="height: 22.85pt">
+              <td
+                width="113"
+                colspan="5"
+                rowspan="2"
+                style="
+                  width: 84.7pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 22.85pt;
+                "
+              >
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Degree/Certificate</span
+                  >
+                </p>
+              </td>
+              <td
+                width="110"
+                colspan="4"
+                rowspan="2"
+                style="
+                  width: 82.65pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 22.85pt;
+                "
+              >
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Institution</span
+                  >
+                </p>
+              </td>
+              <td
+                width="167"
+                colspan="9"
+                valign="top"
+                style="
+                  width: 125.15pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid black 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 22.85pt;
+                "
+              >
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Examination
+                  </span>
+                </p>
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Month and year</span
+                  >
+                </p>
+              </td>
+              <td
+                width="156"
+                colspan="9"
+                rowspan="2"
+                valign="top"
+                style="
+                  width: 117pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 22.85pt;
+                "
+              >
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Subject</span
+                  >
+                </p>
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >OR</span
+                  >
+                </p>
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Specialization</span
+                  >
+                </p>
+              </td>
+              <td
+                width="168"
+                colspan="2"
+                rowspan="2"
+                valign="top"
+                style="
+                  width: 1.75in;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 22.85pt;
+                "
+              >
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Results / Grades / Percentage</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr style="height: 7.1pt">
+              <td
+                width="89"
+                colspan="4"
+                valign="top"
+                style="
+                  width: 66.85pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid black 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 7.1pt;
+                "
+              >
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Month
+                  </span>
+                </p>
+              </td>
+              <td
+                width="78"
+                colspan="5"
+                valign="top"
+                style="
+                  width: 58.3pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 7.1pt;
+                "
+              >
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Year</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="113"
+                colspan="5"
+                valign="top"
+                style="
+                  width: 84.7pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  /* margin: 5px; */
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="110"
+                colspan="4"
+                valign="top"
+                style="
+                  width: 82.65pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="89"
+                colspan="4"
+                valign="top"
+                style="
+                  width: 66.85pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid black 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="78"
+                colspan="5"
+                valign="top"
+                style="
+                  width: 58.3pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="156"
+                colspan="9"
+                valign="top"
+                style="
+                  width: 117pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="168"
+                colspan="2"
+                valign="top"
+                style="
+                  width: 1.75in;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="714"
+                colspan="29"
+                valign="top"
+                style="
+                  width: 535.5pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  background: black;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                      color: white;
+                    "
+                    >Work Experience (If any). Starting with latest one</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="26"
+                valign="top"
+                style="
+                  width: 19.2pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >i</span
+                  >
+                </p>
+              </td>
+              <td
+                width="688"
+                colspan="28"
+                valign="top"
+                style="
+                  width: 516.3pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="26"
+                valign="top"
+                style="
+                  width: 19.2pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >ii</span
+                  >
+                </p>
+              </td>
+              <td
+                width="688"
+                colspan="28"
+                valign="top"
+                style="
+                  width: 516.3pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="266"
+                colspan="11"
+                valign="top"
+                style="
+                  width: 199.55pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="113"
+                colspan="6"
+                valign="top"
+                style="
+                  width: 85.05pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  background: black;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                      color: white;
+                    "
+                    >FEES DETAILS</span
+                  >
+                </p>
+              </td>
+              <td
+                width="335"
+                colspan="12"
+                valign="top"
+                style="
+                  width: 250.9pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="165"
+                colspan="8"
+                valign="top"
+                style="
+                  width: 123.7pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <b
+                    ><span
+                      style="
+                        font-size: 9pt;
+                        line-height: 150%;
+                        font-family: 'Tahoma', sans-serif;
+                      "
+                      >Basic Course Fees</span
+                    ></b
+                  >
+                </p>
+              </td>
+              <td
+                width="157"
+                colspan="6"
+                valign="top"
+                style="
+                  width: 117.8pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <b
+                    ><span
+                      style="
+                        font-size: 9pt;
+                        line-height: 150%;
+                        font-family: 'Tahoma', sans-serif;
+                      "
+                      >Other Charges</span
+                    ></b
+                  >
+                </p>
+              </td>
+              <td
+                width="165"
+                colspan="10"
+                valign="top"
+                style="
+                  width: 123.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <b
+                    ><span
+                      style="
+                        font-size: 9pt;
+                        line-height: 150%;
+                        font-family: 'Tahoma', sans-serif;
+                      "
+                      >Details</span
+                    ></b
+                  >
+                </p>
+              </td>
+              <td
+                width="227"
+                colspan="5"
+                valign="top"
+                style="
+                  width: 170.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <b
+                    ><span
+                      style="
+                        font-size: 9pt;
+                        line-height: 150%;
+                        font-family: 'Tahoma', sans-serif;
+                      "
+                      >Total Fees</span
+                    ></b
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr style="height: 11.5pt">
+              <td
+                width="165"
+                colspan="8"
+                valign="top"
+                style="
+                  width: 123.7pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 11.5pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="157"
+                colspan="6"
+                valign="top"
+                style="
+                  width: 117.8pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 11.5pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="165"
+                colspan="10"
+                valign="top"
+                style="
+                  width: 123.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 11.5pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="227"
+                colspan="5"
+                valign="top"
+                style="
+                  width: 170.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 11.5pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="165"
+                colspan="8"
+                valign="top"
+                style="
+                  width: 123.7pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <b
+                    ><span
+                      style="
+                        font-size: 9pt;
+                        line-height: 150%;
+                        font-family: 'Tahoma', sans-serif;
+                      "
+                      >Fees Paid</span
+                    ></b
+                  >
+                </p>
+              </td>
+              <td
+                width="157"
+                colspan="6"
+                valign="top"
+                style="
+                  width: 117.8pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="165"
+                colspan="10"
+                valign="top"
+                style="
+                  width: 123.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="227"
+                colspan="5"
+                valign="top"
+                style="
+                  width: 170.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <b
+                    ><span
+                      style="
+                        font-size: 9pt;
+                        line-height: 150%;
+                        font-family: 'Tahoma', sans-serif;
+                      "
+                      >Balance Fees</span
+                    ></b
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="165"
+                colspan="8"
+                valign="top"
+                style="
+                  width: 123.7pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="157"
+                colspan="6"
+                valign="top"
+                style="
+                  width: 117.8pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="165"
+                colspan="10"
+                valign="top"
+                style="
+                  width: 123.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="227"
+                colspan="5"
+                valign="top"
+                style="
+                  width: 170.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="132"
+                colspan="6"
+                style="
+                  width: 99pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  background: black;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                      color: white;
+                    "
+                    >Examination Option</span
+                  >
+                </p>
+              </td>
+              <td
+                width="222"
+                colspan="10"
+                style="
+                  width: 166.35pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <b
+                    ><span
+                      style="
+                        font-size: 14pt;
+                        line-height: 150%;
+                        font-family: 'Tahoma', sans-serif;
+                      "
+                      >□</span
+                    ></b
+                  ><span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                  >
+                    Home&nbsp; </span
+                  ><b
+                    ><span
+                      style="
+                        font-size: 14pt;
+                        line-height: 150%;
+                        font-family: 'Tahoma', sans-serif;
+                      "
+                      >□</span
+                    ></b
+                  ><span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                  >
+                    Study Center&nbsp; </span
+                  ><b
+                    ><span
+                      style="
+                        font-size: 14pt;
+                        line-height: 150%;
+                        font-family: 'Tahoma', sans-serif;
+                      "
+                      >□</span
+                    ></b
+                  ><span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                  >
+                    Online</span
+                  >
+                </p>
+              </td>
+              <td
+                width="111"
+                colspan="6"
+                style="
+                  width: 83.1pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  background: black;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                      color: white;
+                    "
+                    >Study Materials</span
+                  >
+                </p>
+              </td>
+              <td
+                width="249"
+                colspan="7"
+                style="
+                  width: 187.05pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <b
+                    ><span
+                      style="
+                        font-size: 14pt;
+                        line-height: 150%;
+                        font-family: 'Tahoma', sans-serif;
+                      "
+                      >□</span
+                    ></b
+                  ><span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                  >
+                    TAB&nbsp; </span
+                  ><b
+                    ><span
+                      style="
+                        font-size: 14pt;
+                        line-height: 150%;
+                        font-family: 'Tahoma', sans-serif;
+                      "
+                      >□</span
+                    ></b
+                  ><span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp; BOOKS&nbsp; </span
+                  ><b
+                    ><span
+                      style="
+                        font-size: 14pt;
+                        line-height: 150%;
+                        font-family: 'Tahoma', sans-serif;
+                      "
+                      >□</span
+                    ></b
+                  ><span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                  >
+                    ONLINE</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="132"
+                colspan="6"
+                style="
+                  width: 99pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Declaration
+                  </span>
+                </p>
+              </td>
+              <td
+                width="582"
+                colspan="23"
+                valign="top"
+                style="
+                  width: 436.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >I certify that all information provided in this application
+                    is complete and accurate. I agree to familiarize myself with
+                    all the rules and regulations of the program set forth by
+                    ISBM and abide by them.</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="132"
+                colspan="6"
+                valign="top"
+                style="
+                  width: 99pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Date</span
+                  >
+                </p>
+              </td>
+              <td
+                width="102"
+                colspan="6"
+                valign="top"
+                style="
+                  width: 76.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+
+              <td
+                width="107"
+                colspan="6"
+                rowspan="2"
+                style="
+                  width: 80.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  background: black;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                      color: white;
+                    "
+                    >Student Signature</span
+                  >
+                </p>
+              </td>
+              <td
+                width="209"
+                colspan="11"
+                rowspan="2"
+                valign="top"
+                style="
+                  width: 157pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="132"
+                colspan="6"
+                valign="top"
+                style="
+                  width: 99pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Branch</span
+                  >
+                </p>
+              </td>
+              <td
+                width="102"
+                colspan="6"
+                valign="top"
+                style="
+                  width: 76.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="714"
+                colspan="29"
+                valign="top"
+                style="
+                  width: 535.5pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  background: #b6dde8;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <b
+                    ><span
+                      style="
+                        font-size: 9pt;
+                        line-height: 150%;
+                        font-family: 'Tahoma', sans-serif;
+                        color: black;
+                      "
+                      >FOR OFFICE USE ONLY</span
+                    ></b
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="88"
+                colspan="6"
+                valign="top"
+                style="
+                  width: 66.35pt;
+                  border-top: none;
+                  border-left: solid windowtext 1pt;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Amount:</span
+                  >
+                </p>
+              </td>
+              <td
+                width="212"
+                colspan="9"
+                valign="top"
+                style="
+                  width: 158.65pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="108"
+                colspan="8"
+                valign="top"
+                style="
+                  width: 81pt;
+                  border: none;
+                  border-bottom: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Payment Details :</span
+                  >
+                </p>
+              </td>
+              <td
+                width="306"
+                colspan="9"
+                valign="top"
+                style="
+                  width: 229.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="88"
+                colspan="6"
+                valign="top"
+                style="
+                  width: 66.35pt;
+                  border-top: none;
+                  border-left: solid windowtext 1pt;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Receipt No. :</span
+                  >
+                </p>
+              </td>
+              <td
+                width="212"
+                colspan="9"
+                valign="top"
+                style="
+                  width: 158.65pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="108"
+                colspan="8"
+                valign="top"
+                style="
+                  width: 81pt;
+                  border: none;
+                  border-bottom: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="306"
+                colspan="9"
+                valign="top"
+                style="
+                  width: 229.5pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="88"
+                colspan="3"
+                valign="top"
+                style="
+                  width: 66.35pt;
+                  border-top: none;
+                  border-left: solid windowtext 1pt;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Remarks :
+                  </span>
+                </p>
+              </td>
+              <td
+                width="626"
+                colspan="26"
+                valign="top"
+                style="
+                  width: 469.15pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr style="height: 19.75pt">
+              <td
+                width="427"
+                colspan="21"
+                valign="top"
+                style="
+                  width: 320.35pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 19.75pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+              <td
+                width="287"
+                colspan="8"
+                rowspan="2"
+                valign="bottom"
+                style="
+                  width: 215.15pt;
+                  border-top: none;
+                  border-left: none;
+                  border-bottom: solid windowtext 1pt;
+                  border-right: solid windowtext 1pt;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                  height: 19.75pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+
+                <p
+                  class="MsoNormal"
+                  align="center"
+                  style="text-align: center; line-height: 150%; margin: 5px"
+                >
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >Manager’s Signature :</span
+                  >
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                width="427"
+                colspan="21"
+                valign="top"
+                style="
+                  width: 320.35pt;
+                  border: solid windowtext 1pt;
+                  border-top: none;
+                  padding: 0in 5.4pt 0in 5.4pt;
+                "
+              >
+                <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                  <span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                    "
+                    >&nbsp;</span
+                  >
+                </p>
+              </td>
+            </tr>
+
+            <tr height="0">
+              <td width="26" style="border: none"></td>
+              <td width="46" style="border: none"></td>
+              <td width="16" style="border: none"></td>
+              <td width="8" style="border: none"></td>
+              <td width="17" style="border: none"></td>
+              <td width="19" style="border: none"></td>
+              <td width="18" style="border: none"></td>
+              <td width="15" style="border: none"></td>
+              <td width="58" style="border: none"></td>
+              <td width="11" style="border: none"></td>
+              <td width="32" style="border: none"></td>
+              <td width="34" style="border: none"></td>
+              <td width="12" style="border: none"></td>
+              <td width="10" style="border: none"></td>
+              <td width="18" style="border: none"></td>
+              <td width="14" style="border: none"></td>
+              <td width="26" style="border: none"></td>
+              <td width="11" style="border: none"></td>
+              <td width="7" style="border: none"></td>
+              <td width="11" style="border: none"></td>
+              <td width="19" style="border: none"></td>
+              <td width="37" style="border: none"></td>
+              <td width="12" style="border: none"></td>
+              <td width="10" style="border: none"></td>
+              <td width="18" style="border: none"></td>
+              <td width="27" style="border: none"></td>
+              <td width="14" style="border: none"></td>
+              <td width="30" style="border: none"></td>
+              <td width="138" style="border: none"></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <!-- ======= END HEADER BLOCK ======= -->
     </div>
@@ -319,7 +3071,382 @@
         flex-direction: column;
         padding: 5mm;
       "
-    ></div>
+    >
+      <table>
+        <tbody>
+          <tr>
+            <td
+              width="714"
+              colspan="29"
+              valign="top"
+              style="
+                width: 535.5pt;
+                border: solid windowtext 1pt;
+                border-top: none;
+                background: #b6dde8;
+                padding: 0in 5.4pt 0in 5.4pt;
+              "
+            >
+              <p
+                class="MsoNormal"
+                align="center"
+                style="text-align: center; line-height: 150%; margin: 5px"
+              >
+                <b
+                  ><span
+                    style="
+                      font-size: 9pt;
+                      line-height: 150%;
+                      font-family: 'Tahoma', sans-serif;
+                      color: black;
+                    "
+                    >FOR HEAD OFFICE USE ONLY</span
+                  ></b
+                >
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td
+              width="88"
+              colspan="5"
+              valign="top"
+              style="
+                width: 66.35pt;
+                border-top: none;
+                border-left: solid windowtext 1pt;
+                border-bottom: solid windowtext 1pt;
+                border-right: none;
+                padding: 0in 5.4pt 0in 5.4pt;
+              "
+            >
+              <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                <span
+                  style="
+                    font-size: 9pt;
+                    line-height: 150%;
+                    font-family: 'Tahoma', sans-serif;
+                  "
+                  >Record Entry No:</span
+                >
+              </p>
+            </td>
+            <td
+              width="212"
+              colspan="9"
+              valign="top"
+              style="
+                width: 158.65pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0in 5.4pt 0in 5.4pt;
+              "
+            >
+              <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                <span
+                  style="
+                    font-size: 9pt;
+                    line-height: 150%;
+                    font-family: 'Tahoma', sans-serif;
+                  "
+                  >&nbsp;</span
+                >
+              </p>
+            </td>
+            <td
+              width="108"
+              colspan="8"
+              valign="top"
+              style="
+                width: 81pt;
+                border: none;
+                border-bottom: solid windowtext 1pt;
+                padding: 0in 5.4pt 0in 5.4pt;
+              "
+            >
+              <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                <span
+                  style="
+                    font-size: 9pt;
+                    line-height: 150%;
+                    font-family: 'Tahoma', sans-serif;
+                  "
+                  >Examination Date :</span
+                >
+              </p>
+            </td>
+            <td
+              width="306"
+              colspan="9"
+              valign="top"
+              style="
+                width: 229.5pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0in 5.4pt 0in 5.4pt;
+              "
+            >
+              <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                <span
+                  style="
+                    font-size: 9pt;
+                    line-height: 150%;
+                    font-family: 'Tahoma', sans-serif;
+                  "
+                  >&nbsp;</span
+                >
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td
+              width="88"
+              colspan="5"
+              valign="top"
+              style="
+                width: 66.35pt;
+                border-top: none;
+                border-left: solid windowtext 1pt;
+                border-bottom: solid windowtext 1pt;
+                border-right: none;
+                padding: 0in 5.4pt 0in 5.4pt;
+              "
+            >
+              <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                <span
+                  style="
+                    font-size: 9pt;
+                    line-height: 150%;
+                    font-family: 'Tahoma', sans-serif;
+                  "
+                  >Book Sending Date. :</span
+                >
+              </p>
+            </td>
+            <td
+              width="212"
+              colspan="9"
+              valign="top"
+              style="
+                width: 158.65pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0in 5.4pt 0in 5.4pt;
+              "
+            >
+              <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                <span
+                  style="
+                    font-size: 9pt;
+                    line-height: 150%;
+                    font-family: 'Tahoma', sans-serif;
+                  "
+                  >&nbsp;</span
+                >
+              </p>
+            </td>
+            <td
+              width="108"
+              colspan="8"
+              valign="top"
+              style="
+                width: 81pt;
+                border: none;
+                border-bottom: solid windowtext 1pt;
+                padding: 0in 5.4pt 0in 5.4pt;
+              "
+            >
+              <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                <span
+                  style="
+                    font-size: 9pt;
+                    line-height: 150%;
+                    font-family: 'Tahoma', sans-serif;
+                  "
+                  >Certificate Date:</span
+                >
+              </p>
+            </td>
+            <td
+              width="306"
+              colspan="9"
+              valign="top"
+              style="
+                width: 229.5pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0in 5.4pt 0in 5.4pt;
+              "
+            >
+              <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                <span
+                  style="
+                    font-size: 9pt;
+                    line-height: 150%;
+                    font-family: 'Tahoma', sans-serif;
+                  "
+                  >&nbsp;</span
+                >
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td
+              width="88"
+              colspan="5"
+              valign="top"
+              style="
+                width: 66.35pt;
+                border-top: none;
+                border-left: solid windowtext 1pt;
+                border-bottom: solid windowtext 1pt;
+                border-right: none;
+                padding: 0in 5.4pt 0in 5.4pt;
+              "
+            >
+              <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                <span
+                  style="
+                    font-size: 9pt;
+                    line-height: 150%;
+                    font-family: 'Tahoma', sans-serif;
+                  "
+                  >No. of Book Sent :</span
+                >
+              </p>
+            </td>
+            <td
+              width="212"
+              colspan="9"
+              valign="top"
+              style="
+                width: 158.65pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0in 5.4pt 0in 5.4pt;
+              "
+            >
+              <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                <span
+                  style="
+                    font-size: 9pt;
+                    line-height: 150%;
+                    font-family: 'Tahoma', sans-serif;
+                  "
+                  >&nbsp;</span
+                >
+              </p>
+            </td>
+            <td
+              width="108"
+              colspan="8"
+              valign="top"
+              style="
+                width: 81pt;
+                border: none;
+                border-bottom: solid windowtext 1pt;
+                padding: 0in 5.4pt 0in 5.4pt;
+              "
+            >
+              <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                <span
+                  style="
+                    font-size: 9pt;
+                    line-height: 150%;
+                    font-family: 'Tahoma', sans-serif;
+                  "
+                  >POD No.</span
+                >
+              </p>
+            </td>
+            <td
+              width="306"
+              colspan="9"
+              valign="top"
+              style="
+                width: 229.5pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0in 5.4pt 0in 5.4pt;
+              "
+            >
+              <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                <span
+                  style="
+                    font-size: 9pt;
+                    line-height: 150%;
+                    font-family: 'Tahoma', sans-serif;
+                  "
+                  >&nbsp;</span
+                >
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td
+              width="88"
+              colspan="6"
+              valign="top"
+              style="
+                width: 66.35pt;
+                border-top: none;
+                border-left: solid windowtext 1pt;
+                border-bottom: solid windowtext 1pt;
+                border-right: none;
+                padding: 0in 5.4pt 0in 5.4pt;
+              "
+            >
+              <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                <span
+                  style="
+                    font-size: 9pt;
+                    line-height: 150%;
+                    font-family: 'Tahoma', sans-serif;
+                  "
+                  >Authoised Signature :
+                </span>
+              </p>
+            </td>
+            <td
+              width="626"
+              colspan="26"
+              valign="top"
+              style="
+                width: 469.15pt;
+                border-top: none;
+                border-left: none;
+                border-bottom: solid windowtext 1pt;
+                border-right: solid windowtext 1pt;
+                padding: 0in 5.4pt 0in 5.4pt;
+              "
+            >
+              <p class="MsoNormal" style="line-height: 150%; margin: 5px">
+                <span
+                  style="
+                    font-size: 9pt;
+                    line-height: 150%;
+                    font-family: 'Tahoma', sans-serif;
+                  "
+                  >&nbsp;</span
+                >
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
     <!-- PRINT BUTTON -->
     <div style="margin-top: 20px; text-align: center">
@@ -363,7 +3490,7 @@
             .sheet {
               width: 210mm;
               min-height: 297mm;
-              margin: 0mm auto;
+              margin: 0mm 0mm;
               background: #fff;
               box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
               display: flex;
